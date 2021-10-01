@@ -6,6 +6,14 @@ export const Connect = (code: string) => {
     }
 }
 
+export const CompteCreer = (code: string) => {
+    return {
+        error: false,
+        code: code,
+        message: "Votre compte à été créer"
+    }
+}
+
 export const Deconnecter = (code: string) => {
     return {
         error: false,

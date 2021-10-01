@@ -15,6 +15,14 @@ export const incorrectFormatPassword = (code: string) => {
 }
 
 
+export const isEmailExist = (code: string) => {
+    return {
+        error: true,
+        code: code,
+        message: "L'email existe déjà"
+    }
+}
+
 export const compteLocker = (code: string) => {
     return {
         error: true,
@@ -36,5 +44,13 @@ export const ErrorServer = (code: string) => {
         error: true,
         code: code,
         message: "Error server"
+    }
+}
+
+export const isUsernameExist = (code: string) => {
+    return {
+        error: true,
+        code: code,
+        message: "Votre username n'est pas correcte"
     }
 }

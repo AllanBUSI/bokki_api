@@ -7,7 +7,7 @@ import { isExisted, isPassword } from '../utils/functionTool';
 
 export const authLoginMiddleware = (req:Request, res:Response, next:NextFunction) => {
     const body = req.body as IAuthLoginInterfaces;
-    
+    console.log(body);
     if (isExisted(body.email) === false || isEmail(body.email) === false || body.email.length >= 100 || body.email.length <= 5) 
         return res.status(409).json(incorrectFormat("email", "auth:error:01"))
     
@@ -36,7 +36,7 @@ export const authNewPasswordMiddleware = (req:Request, res:Response, next:NextFu
         return res.status(409).json(incorrectFormat("firstname", "auth:error:02"))
     
     if(body.password !== body.password_confirm)
-        return res.status(409).json(incorrectFormatPassword("auth:error:06"))
+        return res.status(409).json(incorrectFormatPassword("auth:error:03"))
 
     next()
 }

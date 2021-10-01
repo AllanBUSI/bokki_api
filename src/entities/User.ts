@@ -9,6 +9,12 @@ export class User {
     @Column("varchar", { name: "username", length: 255 })
     username: string;
 
+    @Column("varchar", { name: "name", length: 255 })
+    name: string;
+
+    @Column("varchar", { name: "firstname", length: 255 })
+    firstname: string;
+
     @Column("varchar", { name: "email", length: 255 })
     email: string;
 
